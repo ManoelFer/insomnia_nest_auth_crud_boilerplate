@@ -1,0 +1,349 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-10-03T17:27:43.046Z",
+  "__export_source": "insomnia.desktop.app:v2021.6.0",
+  "resources": [
+    {
+      "_id": "req_cb80a27157e247c092bbeed53c31803a",
+      "parentId": "fld_3eb5988b9b3549a5823f9bad8e43a00d",
+      "modified": "1637671845661",
+      "created": 1672250796508,
+      "url": "{{ _.baseUrl }}",
+      "name": "Hello World",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1672250796508,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_3eb5988b9b3549a5823f9bad8e43a00d",
+      "parentId": "__WORKSPACE_ID__",
+      "modified": "1637671845661",
+      "created": 1672250795151,
+      "name": "Test Endpoints",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1672257013751,
+      "_type": "request_group"
+    },
+    {
+      "_id": "__WORKSPACE_ID__",
+      "parentId": null,
+      "modified": "1637671845661",
+      "created": 1672250727089,
+      "name": "NestJs Boilerplate Auth CRUD",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_7530bc38d25f4f98a35bf45fe5e0cf15",
+      "parentId": "fld_42fb56b706f143d8839d43167971bd19",
+      "modified": "1637671845661",
+      "created": 1672255645594,
+      "url": "{{ _.baseUrl }}/api",
+      "name": "Swagger",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1672255645594,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_42fb56b706f143d8839d43167971bd19",
+      "parentId": "__WORKSPACE_ID__",
+      "modified": "1637671845661",
+      "created": 1672255643403,
+      "name": "Documentation",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1672257013801,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_90283260f98c4716a313372133a2e1cb",
+      "parentId": "fld_d14b3471d0614350a29e6421f0dfa9eb",
+      "modified": "1637671845661",
+      "created": 1672257016986,
+      "url": "{{ _.baseUrl }}/users",
+      "name": "Create a New User",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"marciana@email.com\",\n\t\"password\": \"123teste\",\n\t\"name\": \"Marciana\",\n\t\"cellphone\": \"(64) 999690090\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1672257016986,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_d14b3471d0614350a29e6421f0dfa9eb",
+      "parentId": "__WORKSPACE_ID__",
+      "modified": "1637671845661",
+      "created": 1672257013701,
+      "name": "Users",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1672257013701,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_950c0a047cd14446bf7b66de63163b3a",
+      "parentId": "fld_d14b3471d0614350a29e6421f0dfa9eb",
+      "modified": "1637671845661",
+      "created": 1672317560691,
+      "url": "{{ _.baseUrl }}/users",
+      "name": "List All Users",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_bf5b7869ab80454c8e5103b1c0328b57",
+          "name": "skip",
+          "value": "1",
+          "description": "",
+          "disabled": true
+        },
+        {
+          "id": "pair_084250e5264846ed9c847c2d23a89c57",
+          "name": "take",
+          "value": "2",
+          "description": "",
+          "disabled": true
+        },
+        {
+          "id": "pair_c65c0c7b6ee84c4e98a810a97e89b0d5",
+          "name": "cursor",
+          "value": "{ \"email\": \"thays@email.com\" }",
+          "description": "",
+          "disabled": true,
+          "type": "text",
+          "multiline": "application/json"
+        },
+        {
+          "id": "pair_46b3f48afe474c31b96733594669c8a1",
+          "name": "where",
+          "value": "{\n\t\"OR\": [\n\t\t{\n\t\t\t\"name\": {\n\t\t\t\t\"contains\": \"Neves\"\n\t\t\t}\n\t\t}\n\t]\n}",
+          "description": "",
+          "disabled": true,
+          "type": "text",
+          "multiline": "application/json"
+        },
+        {
+          "id": "pair_9d29968fbf874b89ae0e03795aea259a",
+          "name": "orderBy",
+          "value": "{\n\t\"id\": \"desc\"\n}",
+          "description": "",
+          "type": "text",
+          "multiline": "application/json",
+          "disabled": false
+        }
+      ],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1672256331290,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_fc2f1d9540b540b68aaeef8b0c2650d8",
+      "parentId": "fld_d14b3471d0614350a29e6421f0dfa9eb",
+      "modified": "1637671845661",
+      "created": 1672327951345,
+      "url": "{{ _.baseUrl }}/users/{\"id\": 24}",
+      "name": "Get By Param",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_c14ab40210dd4c4fa9ca2a866979039e",
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1672255988442,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5ec85a2ee5a7457aa48cdf24118ef3d9",
+      "parentId": "fld_d14b3471d0614350a29e6421f0dfa9eb",
+      "modified": "1637671845661",
+      "created": 1672337281179,
+      "url": "{{ _.baseUrl }}/users/{\"id\": 1}",
+      "name": "Update User",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Manuzinho\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1672256674138,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5f74da52b971448b874828ec12bb2d4f",
+      "parentId": "fld_0639bb2938354765ab78ab898051d13c",
+      "modified": "1637671845661",
+      "created": 1672743871857,
+      "url": "{{ _.baseUrl }}/{{ _.resource }}",
+      "name": "Login",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\": \"marciana@email.com\",\n\t\"password\": \"123teste\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1672743871857,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_0639bb2938354765ab78ab898051d13c",
+      "parentId": "__WORKSPACE_ID__",
+      "modified": "1637671845661",
+      "created": 1672743866562,
+      "name": "Auth",
+      "description": "",
+      "environment": {
+        "resource": "auth/login"
+      },
+      "environmentPropertyOrder": {
+        "&": [
+          "resource"
+        ]
+      },
+      "metaSortKey": -1672257013726,
+      "_type": "request_group"
+    },
+    {
+      "_id": "__BASE_ENVIRONMENT_ID__",
+      "parentId": "__WORKSPACE_ID__",
+      "modified": "1637671845661",
+      "created": 1672250727092,
+      "name": "Base Environment",
+      "data": {
+        "token": "{% response 'body', '', '', 'never', 60 %}"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "token"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1672250727092,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_5e8eb0da812c4ecc8af7438e596951a7",
+      "parentId": "__BASE_ENVIRONMENT_ID__",
+      "modified": "1637671845661",
+      "created": 1672250737182,
+      "name": "Local Environment",
+      "data": {
+        "baseUrl": "http://localhost:3000",
+        "token": "{% response 'body', 'req_5f74da52b971448b874828ec12bb2d4f', 'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl",
+          "token"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1672250737182,
+      "_type": "environment"
+    }
+  ]
+}
